@@ -284,30 +284,43 @@ template {
     transform: translateX(0px);
   }
 }
+@keyframes btnToUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "lato";
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 400;
   color: #4d4d4d;
-  letter-spacing: 0.48px;
-  padding: 0 50px;
+  letter-spacing: 0.048rem;
+  padding: 0 5rem;
   background-color: #fff;
 }
-body .container .header {
+
+.container .header {
   position: relative;
   height: 95vh;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0.38) 100%), url(<path-to-image>), url(../img/header/header-background.png) center/cover no-repeat;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0% 80%);
           clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0% 80%);
 }
-body .container .header__logo {
+.container .header__logo {
   position: absolute;
-  left: 120px;
-  top: 50px;
-  height: 115px;
-  width: 307px;
+  left: 12rem;
+  top: 5rem;
+  height: 11.5rem;
+  width: 30.7rem;
 }
-body .container .header__box {
+.container .header__box {
   position: absolute;
   width: 100%;
   top: 45%;
@@ -318,35 +331,58 @@ body .container .header__box {
 
 .title-first {
   font-family: "rufina";
-  font-size: 108px;
+  font-size: 10.8rem;
   font-weight: 700;
-  line-height: 120px;
+  line-height: 12rem;
   color: #FFFFFF;
   animation-name: leftToRight;
   animation-duration: 4s;
   animation-delay: 1s;
   animation-timing-function: ease;
   backface-visibility: hidden;
+  animation-fill-mode: backwards;
 }
 .title-first span {
   display: block;
-  margin-bottom: 80px;
+  margin-bottom: 8rem;
 }
 
 .btn:link, .btn:visited {
   font-family: "rufina";
   color: #FFFFFF;
-  font-size: 32px;
+  font-size: 3.2rem;
   font-weight: 700;
-  line-height: 48px;
-  padding: 20px 46px;
+  line-height: 4.8rem;
+  padding: 2rem 4.6rem;
   border: 2px solid #FFFFFF;
   display: inline-block;
   transition: all 0.3s;
+  position: relative;
 }
 .btn:hover {
   transform: translateY(-4px);
+  border: 0rem;
+}
+.btn:hover::after {
+  transform: scale(1.5);
+  opacity: 0;
 }
 .btn:active {
   transform: translateY(-2px);
+}
+.btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 2px solid #FFFFFF;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 1s;
+}
+.btn_animated {
+  animation: btnToUp 5s ease 0.6s;
+  animation-fill-mode: backwards;
 }/*# sourceMappingURL=index.css.map */
