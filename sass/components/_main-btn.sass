@@ -1,0 +1,47 @@
+@import "../abstracts/_mixins"
+@import "../abstracts/_variable"
+.btn
+    &:link, &:visited
+    @include main-btn($color: $color-white,$f-size: 3.2rem, $f-weight: 700, $l-height: 4.8rem, $padding: 2rem 4.6rem)
+    border: 2px solid $color-white
+    display: inline-block
+    transition: all .3s
+    position: relative
+         
+    &:hover
+        transform: translateY(-4px)
+        border: 0rem
+        &::after
+            transform: scale(1.5)
+            opacity: 0
+    &:active
+        transform: translateY(-2px)
+    &::after
+        content: ""
+        width: 100%
+        height: 100%
+        border: 2px solid $color-white
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        transition: all 1s
+.btn-text
+    &:link, &:visited
+    @include main-btn($color: transparent,$f-size: $font-size-h3, $f-weight: 400, $l-height: 3.36rem, $padding: 0)
+    display: inline-block
+    transition: all .3s
+    position: relative
+    background: $gradient-green
+    background-clip: text
+    -webkit-background-clip: text
+    backface-visibility: hidden
+         
+    &:hover
+        transform: translateY(-4px)
+        text-shadow: $shadov-h2
+        &::after
+            transform: scale(1.5)
+    &:active
+        transform: translateY(-2px)

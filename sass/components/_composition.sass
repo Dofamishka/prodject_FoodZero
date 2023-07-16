@@ -1,0 +1,24 @@
+.composition
+    position: relative
+    &__photo
+        width: 50%
+        box-shadow: $shadov-h2
+        position: absolute
+        transition: .8s
+        outline-offset: 1rem
+        &_n1
+            top: 0
+            left: 2rem
+        &_n2
+            top: 6rem
+            right: 2rem
+        &_n3
+            top: 13rem
+            left: 8rem
+        &:hover
+            transform: scale(1.1)
+            z-index: 20
+            outline: 1.5rem solid $color-beige
+    &:hover &__photo:not(:hover)
+        transform: scale(.90)
+

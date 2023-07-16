@@ -1,0 +1,92 @@
+.premium-card
+    padding: 5rem 2.5rem
+    background-color: $color-beige
+    text-align: center
+    box-shadow: $shadov-h2
+    transition: 0.8s
+    backface-visibility: hidden
+    &:hover
+        transform: translateY(-2rem) scale(1.03)
+    &__icon
+        font-size: 10rem
+        color: $color-forestgreen
+        display: inline-block
+.blog-card
+    height: 80rem
+    perspective: 150rem
+    -moz-perspective: 150rem
+    position: relative
+    &__slide
+        height: 80rem
+        transition: 1.3s all ease-out
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        backface-visibility: hidden
+        color: $color-white
+        box-shadow: $shadov-h2
+        &_front
+            background: $gradient-green
+        &_back
+            background: $color-beige
+            transform: rotateY(180deg)
+    &:hover &__slide_front
+        transform: rotateY(-180deg)
+    &:hover &__slide_back
+        transform: rotateY(0deg)
+    &__img
+        height: 60%
+        width: 100%
+        &_1
+            background: url(<path-to-image>),url(../img/main/blog/card_1.jpg) center / cover no-repeat
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0% 80%)
+        &_2
+            background: url(<path-to-image>),url(../img/main/blog/card_2.jpg) center / cover no-repeat
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0% 80%)
+        &_3
+            background: url(<path-to-image>),url(../img/main/blog/card_3.jpg) center / cover no-repeat
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0% 80%)
+    &__title
+        text-align: right
+        position: absolute
+        top: 27rem
+        right: 0rem
+        color: $color-white
+    &__span
+        background: $color-forestgreen-transparent
+        padding: .5rem 2rem
+        &_2
+            position: absolute
+            top: 4.55rem
+            right: 0
+    &__descr
+        ul
+            text-align: center
+            width: 60%
+            margin: 0 auto
+            li
+                display: inline-block
+                padding-bottom: 1rem
+                border-bottom: 1px solid $color-white
+                margin: 0 auto
+                &:not(:last-child)
+                margin-bottom: 2rem
+    &__backSlide-box
+        color: $color-forestgreen
+        position: absolute
+        width: 100%
+        top: 45%
+        left: 50%
+        transform: translate(-50%,-50%)
+        text-align: center        
+    &__icon
+        height: 20rem
+        width: 20rem
+        margin: 0 auto
+        &_1
+            background: url(<path-to-image>),url(../img/main/blog/icon_1.png) center / cover no-repeat
+        &_2
+            background: url(<path-to-image>),url(../img/main/blog/icon_2.png) center / cover no-repeat
+        &_3
+            background: url(<path-to-image>),url(../img/main/blog/icon_3.png) center / cover no-repeat
