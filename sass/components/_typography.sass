@@ -21,11 +21,15 @@
     -webkit-background-clip: text
     transition: 0.8s
     backface-visibility: hidden
+    &_white
+        color: $color-white
     &:hover
         transform: scale(1.1)
         text-shadow:$shadov-h2
 .title-third 
     @include text($f-family: $font-family-title, $f-size: $font-size-h3,$color: $color-gray, $f-weight: 700, $l-height: 6.4rem)
+    &_white
+        color: $color-white
 .title-fourth
     font-size: 3.6rem
     line-height: 4rem

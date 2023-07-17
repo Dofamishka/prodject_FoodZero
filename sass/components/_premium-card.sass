@@ -1,3 +1,4 @@
+/* premium */
 .premium-card
     padding: 5rem 2.5rem
     background-color: $color-beige
@@ -11,6 +12,7 @@
         font-size: 10rem
         color: $color-forestgreen
         display: inline-block
+/* blog */
 .blog-card
     height: 80rem
     perspective: 150rem
@@ -63,7 +65,7 @@
     &__descr
         ul
             text-align: center
-            width: 60%
+            width: 70%
             margin: 0 auto
             li
                 display: inline-block
@@ -76,7 +78,7 @@
         color: $color-forestgreen
         position: absolute
         width: 100%
-        top: 45%
+        top: 50%
         left: 50%
         transform: translate(-50%,-50%)
         text-align: center        
@@ -90,3 +92,42 @@
             background: url(<path-to-image>),url(../img/main/blog/icon_2.png) center / cover no-repeat
         &_3
             background: url(<path-to-image>),url(../img/main/blog/icon_3.png) center / cover no-repeat
+/* process */
+.feedBack-card
+    width: 75%
+    background: rgb($color-white, 0.75)
+    box-shadow: $shadov-h2
+    margin: 0 auto
+    padding: 6rem
+    transform: skewX(-15deg)
+    & > *
+        transform: skewX(15deg)
+    &__img
+        position: relative
+        margin-right: 4rem
+        width: 20rem
+        height: 20rem
+        float: left
+        border-radius: 100rem
+        shape-outside: circle(50% at 50% 50%)
+        -webkit-shape-outside: circle(50% at 50% 50%)
+        overflow: hidden
+        img
+            height: 100%
+            transform: scale(1.2)
+            transition: all .8s
+    &:hover img
+        filter: blur(0.3rem) brightness(80%)
+        transform: scale(1)
+    &__number
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-20%)
+        text-align: center
+        font-size: $font-size-h2
+        opacity: 0
+        transition: all .8s
+    &:hover &__number
+        transform: translate(-50%,-50%)
+        opacity: 1

@@ -4,14 +4,15 @@
 @import "abstracts/_mixins"
 @import "abstracts/functions"
 @import "base/animations"
-@import "base/_utilities"
 @import "components/_typography"
 @import "components/_main-btn"
 @import "base/_grid.sass"
 @import "components/_section-about"
 @import "components/_composition"
 @import "components/_premium-card"
-
+@import "components/_video"
+@import "components/_form"
+@import "base/_utilities"
 
 html
     font-size: 62.5%
@@ -27,7 +28,7 @@ body
     .header
         position: relative
         height: 95vh
-        background: linear-gradient(0deg, rgba($color-black, 0.38) 0%, rgba($color-black, 0.38) 100%), url(<path-to-image>),url(../img/header/header-background.png) center / cover no-repeat
+        background: $gradient-black, url(<path-to-image>),url(../img/header/header-background.png) center / cover no-repeat
         clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0% 80%)
         &__logo
                 position: absolute

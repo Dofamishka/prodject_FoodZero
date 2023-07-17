@@ -291,26 +291,6 @@ template {
     opacity: 1;
   }
 }
-.mb-10px {
-  margin-bottom: 1rem;
-}
-
-.mb-40px {
-  margin-bottom: 4rem;
-}
-
-.mb-60px {
-  margin-bottom: 6rem;
-}
-
-.mb-80px {
-  margin-bottom: 8rem;
-}
-
-.mb-180px {
-  margin-bottom: 18rem;
-}
-
 .title-first {
   font-family: "rufina";
   font-size: 10.8rem;
@@ -345,6 +325,9 @@ template {
   transition: 0.8s;
   backface-visibility: hidden;
 }
+.title-secondary_white {
+  color: #FFFFFF;
+}
 .title-secondary:hover {
   transform: scale(1.1);
   text-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
@@ -356,6 +339,9 @@ template {
   color: #4d4d4d;
   font-weight: 700;
   line-height: 6.4rem;
+}
+.title-third_white {
+  color: #FFFFFF;
 }
 
 .title-fourth {
@@ -403,8 +389,15 @@ template {
   z-index: -1;
   transition: all 1s;
 }
+.btn_green {
+  border: 0;
+  background-color: #233000;
+}
+.btn_green::after {
+  display: none;
+}
 
-.btn-text {
+.btn-text:link, .btn-text:visited {
   font-family: "rufina";
   color: transparent;
   font-size: 3.8rem;
@@ -429,6 +422,11 @@ template {
 .btn-text:active {
   transform: translateY(-2px);
 }
+.btn-text_white:link, .btn-text_white:visited {
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  padding: 2rem 4.6rem;
+}
 
 [class^=col-]:not(:last-child) {
   margin-right: 6rem;
@@ -436,11 +434,9 @@ template {
 
 .row {
   display: flex;
+  flex-wrap: wrap;
   max-width: 164.4rem;
   margin: 0 auto;
-}
-.row:not(:last-child) {
-  margin-bottom: 8rem;
 }
 
 .col-1-of-2 {
@@ -480,6 +476,16 @@ template {
   padding: 20rem 0;
 }
 
+.section-process {
+  padding: 8rem 0;
+  position: relative;
+}
+
+.section-booking {
+  padding: 10rem;
+  background: linear-gradient(135deg, rgba(35, 48, 0, 0.05) 0%, rgba(35, 48, 0, 0.7) 100%);
+}
+
 .composition {
   position: relative;
 }
@@ -511,6 +517,7 @@ template {
   transform: scale(0.9);
 }
 
+/* premium */
 .premium-card {
   padding: 5rem 2.5rem;
   background-color: #EBF0E4;
@@ -528,6 +535,7 @@ template {
   display: inline-block;
 }
 
+/* blog */
 .blog-card {
   height: 80rem;
   perspective: 150rem;
@@ -593,7 +601,7 @@ template {
 }
 .blog-card__descr ul {
   text-align: center;
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
 }
 .blog-card__descr ul li {
@@ -607,7 +615,7 @@ template {
   color: #233000;
   position: absolute;
   width: 100%;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -625,6 +633,193 @@ template {
 }
 .blog-card__icon_3 {
   background: url(<path-to-image>), url(../img/main/blog/icon_3.png) center/cover no-repeat;
+}
+
+/* process */
+.feedBack-card {
+  width: 75%;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  margin: 0 auto;
+  padding: 6rem;
+  transform: skewX(-15deg);
+}
+.feedBack-card > * {
+  transform: skewX(15deg);
+}
+.feedBack-card__img {
+  position: relative;
+  margin-right: 4rem;
+  width: 20rem;
+  height: 20rem;
+  float: left;
+  border-radius: 100rem;
+  shape-outside: circle(50% at 50% 50%);
+  -webkit-shape-outside: circle(50% at 50% 50%);
+  overflow: hidden;
+}
+.feedBack-card__img img {
+  height: 100%;
+  transform: scale(1.2);
+  transition: all 0.8s;
+}
+.feedBack-card:hover img {
+  filter: blur(0.3rem) brightness(80%);
+  transform: scale(1);
+}
+.feedBack-card__number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  text-align: center;
+  font-size: 6.8rem;
+  opacity: 0;
+  transition: all 0.8s;
+}
+.feedBack-card:hover .feedBack-card__number {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bg-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.38) 0%, rgba(0, 0, 0, 0.38) 100%);
+  z-index: -1;
+}
+
+.booking {
+  height: 90rem;
+  width: 100%;
+  background: linear-gradient(115deg, rgba(235, 240, 228, 0.6503851541) 0%, rgba(235, 240, 228, 0.787640056) 57%, rgba(0, 0, 0, 0.1069677871) 57%, rgba(0, 0, 0, 0.4206932773) 100%), url(<path-to-image>), url(../img/main/booking/booking_bg.jpg) center/cover no-repeat;
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  padding: 5rem;
+}
+
+.form {
+  width: 50%;
+}
+.form__group:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.form__input {
+  font-family: "rufina";
+  font-size: 2.4rem;
+  color: #233000;
+  font-weight: 400;
+  line-height: 2.4rem;
+  background: #FFFFFF;
+  padding: 2rem 0 2rem 2rem;
+  border-bottom: 0.2rem solid transparent;
+  width: 55%;
+}
+.form__input:focus {
+  border-bottom: 0.3rem solid #5E6600;
+  box-shadow: 0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
+}
+.form__input:focus:invalid {
+  border-bottom: 0.3rem solid #b00000;
+}
+.form__label {
+  font-family: "rufina";
+  font-size: 2.8rem;
+  color: #233000;
+  font-weight: 400;
+  line-height: 2.4rem;
+  display: block;
+  margin: 1rem 1.5rem;
+  transition: 0.8s;
+}
+.form__input:-moz-placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-1rem);
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-1rem);
+}
+.form__group-radio:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.form__input-radio:checked ~ .form__label-radio .form__button-radio::after {
+  opacity: 1;
+}
+.form__label-radio {
+  font-family: "rufina";
+  font-size: 2.8rem;
+  color: #233000;
+  font-weight: 400;
+  line-height: 2.4rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem;
+}
+.form__button-radio {
+  display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  border: 0.2rem solid #5E6600;
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+}
+.form__button-radio::after {
+  content: "";
+  display: inline-block;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: 50%;
+  background: #5E6600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.3s all;
+}
+
+.mb-10px {
+  margin-bottom: 1rem;
+}
+
+.mb-40px {
+  margin-bottom: 4rem;
+}
+
+.mb-60px {
+  margin-bottom: 6rem;
+}
+
+.mb-80px {
+  margin-bottom: 8rem;
+}
+
+.mb-180px {
+  margin-bottom: 18rem;
+}
+
+.m-center {
+  margin: 0 auto;
+  display: flex;
 }
 
 html {
