@@ -56,7 +56,7 @@
         />
         <div class="header__box">
           <h1 class="title-first">
-            Deep Sea Snow White<span>Cod Fillet</span>
+            Deep Sea Snow White<span class="mb-80px">Cod Fillet</span>
           </h1>
           <a href="#" class="btn btn_animated">Reservations</a>
         </div>
@@ -90,17 +90,38 @@
               <div class="composition">
                 <img
                   src="img/main/composition/n1.jpg"
-                  alt=""
+                  srcset="
+                    img/main/composition/n1-small.jpg 159w,
+                    img/main/composition/n1.jpg       470w
+                  "
+                  sizes="(max-width:  600px) 30vw,
+                  (max-width:  900px) 19vw,
+                  (max-width:  900px) 13vw, 210px"
+                  alt="img food"
                   class="composition__photo composition__photo_n1"
                 />
                 <img
                   src="img/main/composition/n2.jpg"
-                  alt=""
+                  srcset="
+                    img/main/composition/n2-small.jpg 159w,
+                    img/main/composition/n2.jpg       470w
+                  "
+                  sizes="(max-width:  600px) 30vw,
+                  (max-width:  900px) 19vw,
+                  (max-width:  900px) 13vw, 210px"
+                  alt="img food"
                   class="composition__photo composition__photo_n2"
                 />
                 <img
                   src="img/main/composition/n3.jpg"
-                  alt=""
+                  srcset="
+                    img/main/composition/n3-small.jpg 159w,
+                    img/main/composition/n3.jpg       470w
+                  "
+                  sizes="(max-width:  600px) 30vw,
+                  (max-width:  900px) 19vw,
+                  (max-width:  900px) 13vw, 210px"
+                  alt="img food"
                   class="composition__photo composition__photo_n3"
                 />
               </div>
@@ -113,10 +134,9 @@
             <div class="col-1-of-4">
               <div class="premium-card">
                 <i class="premium-card__icon icon-Icon_fish"></i>
-                <h3 class="title-third mb-10px">Premium Quality</h3>
+                <h3 class="title-third mb-10px">Premium</h3>
                 <p class="paragraph mb-10px">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque
-                  congue arcu
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </p>
               </div>
             </div>
@@ -125,28 +145,25 @@
                 <i class="premium-card__icon icon-Icon_carrot"></i>
                 <h3 class="title-third mb-10px">Seasonal</h3>
                 <p class="paragraph mb-10px">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque
-                  congue arcu
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </p>
               </div>
             </div>
             <div class="col-1-of-4">
               <div class="premium-card">
                 <i class="premium-card__icon icon-Icon_lemon"></i>
-                <h3 class="title-third mb-10px">Fresh Fruit</h3>
+                <h3 class="title-third mb-10px">Fruit</h3>
                 <p class="paragraph mb-10px">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque
-                  congue arcu
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </p>
               </div>
             </div>
             <div class="col-1-of-4">
               <div class="premium-card">
                 <i class="premium-card__icon icon-Icon_fish"></i>
-                <h3 class="title-third mb-10px">Executive Chef</h3>
+                <h3 class="title-third mb-10px">Executive</h3>
                 <p class="paragraph mb-10px">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque
-                  congue arcu
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit
                 </p>
               </div>
             </div>
@@ -173,7 +190,7 @@
                       <li>Sit ametelit adipisci</li>
                       <li>Consectetur adipisicing</li>
                       <li>Seos excepturi natus</li>
-                      <li>Doloribus aliquam voluptas</li>
+                      <li>Doloribus aliquam</li>
                     </ul>
                   </div>
                 </div>
@@ -210,7 +227,7 @@
                       <li>Sit ametelit adipisci</li>
                       <li>Consectetur adipisicing</li>
                       <li>Seos excepturi natus</li>
-                      <li>Doloribus aliquam voluptas</li>
+                      <li>Doloribus aliquam</li>
                     </ul>
                   </div>
                 </div>
@@ -247,7 +264,7 @@
                       <li>Sit ametelit adipisci</li>
                       <li>Consectetur adipisicing</li>
                       <li>Seos excepturi natus</li>
-                      <li>Doloribus aliquam voluptas</li>
+                      <li>Doloribus aliquam</li>
                     </ul>
                   </div>
                 </div>
@@ -281,7 +298,17 @@
           <div class="row mb-80px">
             <div class="feedBack-card">
               <figure class="feedBack-card__img">
-                <img src="../img/main/process/img_1.jpg" alt="" />
+                <img
+                  src="../img/main/process/img_1.jpg"
+                  srcset="
+                    img/main/process/img_1-small.jpg 100w,
+                    img/main/process/img_1.jpg       150w
+                  "
+                  sizes="(max-width:  600px) 13vw,
+                  (max-width:  900px) 16vw,
+                  (max-width:  1300px) 8vw, 110px"
+                  alt="photo steak"
+                />
                 <figcaption
                   class="feedBack-card__number title-third title-third_white"
                 >
@@ -294,9 +321,7 @@
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Provident libero saepe dolore, deleniti necessitatibus
                   corrupti praesentium dicta, asperiores aspernatur iste
-                  voluptatum ipsam et, atque odio sequi illo voluptas id
-                  soluta?Lorem ipsum dolor, sit amet consectetur adipisicing
-                  elit. Magni, nulla.
+                  voluptatum ipsam et, atque odio sequi illo voluptas id.
                 </p>
               </div>
             </div>
@@ -305,7 +330,17 @@
           <div class="row mb-80px">
             <div class="feedBack-card">
               <figure class="feedBack-card__img">
-                <img src="../img/main/process/img_2.jpg" alt="" />
+                <img
+                  src="../img/main/process/img_2.jpg"
+                  srcset="
+                    img/main/process/img_2-small.jpg 100w,
+                    img/main/process/img_2.jpg       150w
+                  "
+                  sizes="(max-width:  600px) 13vw,
+                  (max-width:  900px) 16vw,
+                  (max-width:  1300px) 8vw, 110px"
+                  alt="photo steak"
+                />
                 <figcaption
                   class="feedBack-card__number title-third title-third_white"
                 >
@@ -318,9 +353,7 @@
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                   Provident libero saepe dolore, deleniti necessitatibus
                   corrupti praesentium dicta, asperiores aspernatur iste
-                  voluptatum ipsam et, atque odio sequi illo voluptas id
-                  soluta?Lorem ipsum dolor, sit amet consectetur adipisicing
-                  elit. Magni, nulla.
+                  voluptatum ipsam et, atque odio sequi illo voluptas id.
                 </p>
               </div>
             </div>
@@ -337,7 +370,7 @@
             <div class="booking">
               <div class="booking__form">
                 <form action="" class="form">
-                  <h2 class="title-secondary mb-60px">Make a Reservation</h2>
+                  <h2 class="title-secondary mb-40px">Make a Reservation</h2>
 
                   <div class="form__group">
                     <input

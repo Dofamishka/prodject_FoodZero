@@ -1,13 +1,25 @@
 .mb-10px
     margin-bottom: 1rem
+    @include respond($breakpoint: tab-land)
+        margin-bottom: .5rem
 .mb-40px
     margin-bottom: 4rem
+    @include respond($breakpoint: tab-land)
+        margin-bottom: 2rem
 .mb-60px
     margin-bottom: 6rem
+    @include respond($breakpoint: tab-land)
+        margin-bottom: 3rem
 .mb-80px
     margin-bottom: 8rem
+    @include respond($breakpoint: tab-land)
+        margin-bottom: 4rem
 .mb-180px
     margin-bottom: 18rem
+    @include respond($breakpoint: tab-land)
+        margin-bottom: 10rem
+    @include respond($breakpoint: phone)
+        margin-bottom: 6rem
 .m-center
     margin: 0 auto
     display: flex

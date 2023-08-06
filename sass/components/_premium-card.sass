@@ -1,6 +1,6 @@
 /* premium */
 .premium-card
-    padding: 5rem 2.5rem
+    padding: 3rem 3rem
     background-color: $color-beige
     text-align: center
     box-shadow: $shadov-h2
@@ -13,13 +13,23 @@
         color: $color-forestgreen
         display: inline-block
 /* blog */
+.section-blog
+    .row
+        @media only screen and (max-width:  900px),(hover: none)
+            max-width: 130rem
+        @include respond($breakpoint: tab-port)
+            max-width: 73rem 
 .blog-card
-    height: 80rem
+    height: 65rem
     perspective: 150rem
     -moz-perspective: 150rem
     position: relative
+    @include respond($breakpoint: tab-land)
+        height: 54rem
+    @media only screen and (max-width:  900px),(hover: none)
+        height: auto
     &__slide
-        height: 80rem
+        height: 64rem
         transition: 1.3s all ease-out
         position: absolute
         top: 0
@@ -28,50 +38,99 @@
         backface-visibility: hidden
         color: $color-white
         box-shadow: $shadov-h2
+        @include respond($breakpoint: tab-land)
+            height: 54rem
+        @media only screen and (max-width:  900px),(hover: none)
+            height: auto
+            position: relative
+
         &_front
             background: $gradient-green
+            @media only screen and (max-width:  900px),(hover: none)
+                padding: 5rem 0rem
+            @include respond($breakpoint: tab-port)
+                padding: 5rem 2rem
         &_back
             background: $color-beige
             transform: rotateY(180deg)
+            @media only screen and (max-width:  900px),(hover: none)
+                transform: none
+                clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0% 80%)
+                padding: 10rem 3rem
+            @include respond($breakpoint: tab-port)
+                padding: 10rem
     &:hover &__slide_front
         transform: rotateY(-180deg)
+        @media only screen and (max-width:  900px),(hover: none)
+            transform: none
     &:hover &__slide_back
         transform: rotateY(0deg)
     &__img
-        height: 60%
+        height: 53%
         width: 100%
+        @media only screen and (max-width:  900px),(hover: none)
+            height: 60rem
+            width: 100%
+            margin: 0 auto
         &_1
-            background: url(<path-to-image>),url(../img/main/blog/card_1.jpg) center / cover no-repeat
-        clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0% 80%)
+            background: url(<path-to-image>),url(../img/main/blog/card_1-small.jpg) center / cover no-repeat
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0% 80%)
+            @media (min-width: 670px) and (min-resolution:192dpi), (min-width: 1800px)
+                 background: url(<path-to-image>),url(../img/main/blog/card_1.jpg) center / cover no-repeat
         &_2
-            background: url(<path-to-image>),url(../img/main/blog/card_2.jpg) center / cover no-repeat
-        clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0% 80%)
+            background: url(<path-to-image>),url(../img/main/blog/card_2-small.jpg) center / cover no-repeat
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0% 80%)
+            @media (min-width: 670px) and (min-resolution:192dpi), (min-width: 1800px)
+                 background: url(<path-to-image>),url(../img/main/blog/card_2.jpg) center / cover no-repeat
         &_3
-            background: url(<path-to-image>),url(../img/main/blog/card_3.jpg) center / cover no-repeat
-        clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0% 80%)
+            background: url(<path-to-image>),url(../img/main/blog/card_3-small.jpg) center / cover no-repeat
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 90%, 0% 80%)
+            @media (min-width: 670px) and (min-resolution:192dpi), (min-width: 1800px)
+                 background: url(<path-to-image>),url(../img/main/blog/card_3.jpg) center / cover no-repeat
     &__title
         text-align: right
         position: absolute
-        top: 27rem
+        top: 17rem
         right: 0rem
         color: $color-white
+        @include respond($breakpoint: tab-land)
+            top: 12.5rem
+        @media only screen and (max-width:  900px),(hover: none)
+            top: 32rem
+            right: 0rem
+            font-size: 3.8rem
+        @include respond($breakpoint: tab-port)
+            top: 32rem
+            right: 2rem
+            font-size: 3.8rem
     &__span
         background: $color-forestgreen-transparent
         padding: .5rem 2rem
         &_2
             position: absolute
-            top: 4.55rem
+            top: 4.8rem
             right: 0
+            @include respond($breakpoint: tab-land)
+                top: 4.23rem
+            @media only screen and (max-width:  900px),(hover: none)
+                top: 5rem
+                
     &__descr
         ul
             text-align: center
             width: 70%
             margin: 0 auto
+            @include respond($breakpoint: tab-port)
+                width: 60%
             li
                 display: inline-block
                 padding-bottom: 1rem
                 border-bottom: 1px solid $color-white
                 margin: 0 auto
+                @include respond($breakpoint: tab-land)
+                    padding-bottom: .5rem
+                @include respond($breakpoint: tab-port)
+                    font-size: 2.5rem
                 &:not(:last-child)
                     margin-bottom: 2rem
     &__backSlide-box
@@ -81,7 +140,13 @@
         top: 50%
         left: 50%
         transform: translate(-50%,-50%)
-        text-align: center        
+        text-align: center
+        @media only screen and (max-width:  900px),(hover: none)
+            position: relative
+            top: 0
+            left: 0
+            transform: translate(0%,0%)  
+              
     &__icon
         height: 20rem
         width: 20rem
@@ -94,24 +159,34 @@
             background: url(<path-to-image>),url(../img/main/blog/icon_3.png) center / cover no-repeat
 /* process */
 .feedBack-card
-    width: 75%
+    width: 90%
     background: rgb($color-white, 0.75)
     box-shadow: $shadov-h2
     margin: 0 auto
-    padding: 6rem
+    padding: 5rem
     transform: skewX(-15deg)
+    @include respond($breakpoint: tab-land)
+        padding: 3rem
+    @include respond($breakpoint: tab-port)
+        text-align: center
+        transform: skewX(0)
     & > *
         transform: skewX(15deg)
+        @include respond($breakpoint: tab-port)
+            transform: skewX(0)
     &__img
         position: relative
         margin-right: 4rem
-        width: 20rem
-        height: 20rem
+        width: 15rem
+        height: 15rem
         float: left
         border-radius: 100rem
         shape-outside: circle(50% at 50% 50%)
         -webkit-shape-outside: circle(50% at 50% 50%)
         overflow: hidden
+        @include respond($breakpoint: tab-port)
+            float: none
+            margin: 0 auto
         img
             height: 100%
             transform: scale(1.2)
@@ -131,3 +206,7 @@
     &:hover &__number
         transform: translate(-50%,-50%)
         opacity: 1
+    
+    &__box
+        @include respond($breakpoint: tab-port)
+        margin-top: 2rem

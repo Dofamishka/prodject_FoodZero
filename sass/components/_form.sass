@@ -1,21 +1,41 @@
 @import "../abstracts/_mixins"
 .booking
-    height: 90rem
     width: 100%
-    background: $gradient-black-transparent, url(<path-to-image>),url(../img/main/booking/booking_bg.jpg) center / cover no-repeat
+    background: $gradient-beige-black, url(<path-to-image>),url(../img/main/booking/booking_bg-small.jpg) center / cover no-repeat
+   
     box-shadow: $shadov-h2
     overflow: hidden
     padding: 5rem
+    @media (min-width: 670px) and (min-resolution: 192dpi), (min-width: 1800px)
+        background: $gradient-beige-black, url(<path-to-image>),url(../img/main/booking/booking_bg.jpg) center / cover no-repeat
+    @include respond($breakpoint: tab-land)
+        padding: 3rem
+    @include respond($breakpoint: tab-port)
+        width: 100%
+        background: $background-beige, url(<path-to-image>),url(../img/main/booking/booking_bg.jpg) center / cover no-repeat
+
 .form
-    width: 50%
+    width: 60%
+    @include respond($breakpoint: tab-port)
+        width: 100%
     &__group:not(:last-child)
         margin-bottom: 3rem
+        @include respond($breakpoint: tab-land)
+            margin-bottom: 2rem
+        @include respond($breakpoint: tab-port)
+            width: 60%
+            margin: 0 auto 2rem auto
     &__input
         @include text($f-family: $font-family-title, $f-size: 2.4rem,$color: $color-forestgreen, $f-weight: 400, $l-height: 2.4rem)
         background: $color-white
-        padding: 2rem 0 2rem 2rem
+        padding: 1.5rem 0 1.5rem 2rem
         border-bottom: .2rem solid transparent
-        width: 55%
+        width: 70%
+        @include respond($breakpoint: tab-land)
+            font-size: 2rem
+            width: 60%
+        @include respond($breakpoint: tab-port)
+            width: 100%
         &:focus 
             border-bottom: .3rem solid $color-olive
             box-shadow: $shadov-h2
@@ -26,6 +46,8 @@
         display: block
         margin: 1rem 1.5rem
         transition: 0.8s
+        @include respond($breakpoint: tab-land)
+            font-size: 2.4rem
     &__input:placeholder-shown + &__label
         opacity: 0
         visibility: hidden
@@ -43,6 +65,8 @@
         cursor: pointer
         position: relative
         padding-left: 4rem
+        @include respond($breakpoint: tab-land)
+            font-size: 2.4rem
     &__button-radio
         display: inline-block
         height: 2.5rem
@@ -66,3 +90,8 @@
             opacity: 0
             transition: 0.3s all
 
+    @include respond($breakpoint: tab-port)
+        &__group
+            button
+                display: block
+                margin: 4rem auto 0 auto
